@@ -2,7 +2,7 @@ import com.github.gradle.node.npm.task.NpmTask
 
 plugins {
     `java-library`
-    id("com.github.node-gradle.node")
+    id("com.github.node-gradle.node") version "7.1.0"
 }
 
 description = "Allure Report Generator"
@@ -105,6 +105,7 @@ dependencies {
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml")
     implementation("com.fasterxml.jackson.module:jackson-module-jaxb-annotations")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.17.0")
     implementation("commons-io:commons-io")
     implementation("io.qameta.allure:allure-model")
     implementation("javax.xml.bind:jaxb-api")
