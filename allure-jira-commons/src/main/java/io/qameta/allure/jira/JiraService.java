@@ -27,12 +27,12 @@ import retrofit2.http.Query;
 import java.util.List;
 
 /**
- * Jira Service declaration.
+ * Jira Service declaration.interface.
  */
 public interface JiraService {
 
     @POST("api/2/issue/{issueKey}/comment")
-    Response<ResponseBody> createIssueComment(@Path("issueKey") String issueKey, @Body JiraIssueComment comment);
+   Response<ResponseBody> createIssueComment(@Path("issueKey") String issueKey, @Body JiraIssueComment comment);
 
     @POST("allure/1.0/launch")
     List<JiraExportResult> createJiraLaunch(@Body JiraLaunch launch, @Query("issueKey") List<String> issueKey);
